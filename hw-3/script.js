@@ -52,12 +52,10 @@ visitor = Number(prompt('Сколько вам лет?'))
 if ((visitor >= 12 && visitor < 18) || (visitor >= 60 && visitor <=80)){
    let permission;
    permission = confirm('Есть ли у вас разрешение от взрослых?');
-   switch (permission){
-      case (true):
-         alert('доступ разрешен =)');
-         break;
-      default:
-         alert('доступ запрещен =(');
+   if (permission) {
+      alert('доступ разрешен =)');
+   } else {
+      alert('доступ запрещен =(');
    }
 } else if (visitor < 12 || visitor > 80) {
    alert('Доступ запрещен =(');
