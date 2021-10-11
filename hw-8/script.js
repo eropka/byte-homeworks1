@@ -49,7 +49,6 @@ console.log(varOccurrencesCount);
 // Задание 3
 
 const findExcess = (arr) => {
-
    let integerN =[];
 
    
@@ -72,6 +71,5 @@ const findExcess = (arr) => {
 
    return integerN[0];
 }
-
-const integerNumber = findExcess([1, 3, 5, 6]);
+const integerNumber = findExcess([0, 1, 3, 5]);
 console.log(integerNumber)
