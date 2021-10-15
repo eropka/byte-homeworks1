@@ -1,0 +1,36 @@
+.example-button{
+   display: inline-block;
+   font-size: 20px;
+   position: relative;
+}
+
+.button{
+   margin-top: 100px;
+   text-align: center;
+
+}
+
+.toolTip{
+   display: none;
+   padding: 5px 15px;
+   border-radius: 8px;
+   background-color: blue;
+   color: red;
+   font-size: 20px;
+   transform: translate(-50%, -50%);
+}
+
+.example-button:hover .toolTip{
+   display: inline-block;
+}
+
+.toolTip::after {
+   content: " ";
+   position: absolute;
+   top: 97%;
+   left: 50%;
+   margin-left: -6px;
+   border-width: 6px;
+   border-style: solid;
+   border-color: blue transparent transparent transparent;
+}

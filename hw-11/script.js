@@ -52,7 +52,7 @@ const creatCardProducts = (arr) => {
 
 
    for(let item of arr){
-      // let cardProductsContainerElem = document.createElement('div');
+      let cardProductsContainerElem = document.createElement('div');
       let cardProductsName = document.createElement('h2');
       let cardProductsBrand = document.createElement('h3');   
       let cardProductsProperties = document.createElement('ul');
@@ -66,7 +66,11 @@ const creatCardProducts = (arr) => {
          cardProductsProperties.append(propertiesElem);
       })
       
-      cardProductsContainer.append(cardProductsName, cardProductsBrand, cardProductsProperties);
+      cardProductsContainerElem.append(cardProductsName);
+      cardProductsContainerElem.append(cardProductsBrand);
+      cardProductsContainerElem.append(cardProductsProperties);
+  
+      cardProductsContainer.append(cardProductsContainerElem);
    }
 
    return cardProductsContainer;
